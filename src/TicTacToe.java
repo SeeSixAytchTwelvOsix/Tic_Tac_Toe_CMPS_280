@@ -3,6 +3,7 @@ public class TicTacToe {
     private char nextPlayer;
     private char winner;
 
+    //game constructor
     TicTacToe() {
         board = new char[3][3];
         for (int i = 0; i < board.length; i++) {
@@ -19,7 +20,11 @@ public class TicTacToe {
     public void setNextPlayer(char symbol) {
         this.nextPlayer = symbol;
     }
+    public char getWinner() {
+        return winner;
+    }
 
+    //checks for valid symbol input
     public boolean isValidPlayer(char firstPlayer) {
         boolean valid = false;
         if (firstPlayer == 'x' || firstPlayer == 'o') {
@@ -85,10 +90,6 @@ public class TicTacToe {
         }
 
         return over;
-    }
-
-    public char getWinner() {
-        return winner;
     }
 
     //gameboard display with row/column labels
