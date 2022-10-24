@@ -6,13 +6,13 @@ public class Main {
 
         //pick who wants to go first, 'x' or 'o' and plays first move. Automatic alternating of player: x and o
         System.out.println("\n"+game);
-        System.out.print("Player 1, please pick x or o: ");
+        System.out.print("Player 1! To start game, please pick lowercase x or o: ");
         String playerStr = input.next();
         char player = playerStr.charAt(0);
 
         //checks to make sure first players picks the appropriate symbol for play
         while (!game.isValidPlayer(player)) {
-            System.out.print("HEY Player 1, PLEASE pick x or o this time: ");
+            System.out.print("HEY Player 1, PLEASE pick lowercase x or o this time: ");
             playerStr = input.next();
             player = playerStr.charAt(0);
         }
